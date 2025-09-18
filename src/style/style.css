@@ -1,0 +1,140 @@
+/* ====== Reset & Fonts ====== */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    120deg,
+    #ff9a9e,
+    #fad0c4
+  ); /* גרדיאנט מגניב ורוד-כתום */
+  color: #333;
+}
+
+/* Home container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: #e5787b;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  background: #e5787b;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: auto;
+  border-top: 3px solid #fff;
+}
+
+/* Content wrapper */
+.content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #eb565b; /* כתום חזק */
+  padding: 25px;
+  border-right: 2px solid #fff;
+  min-height: calc(100vh - 100px);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #ffd700; /* זהב */
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 כרטיסים בשורה */
+  gap: 25px;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* ====== Card Design ====== */
+.card_item {
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card_item img {
+  width: 100%;
+  height: 280px; /* גבוה יותר */
+  object-fit: cover;
+}
+
+.card_item h1 {
+  margin: 20px 0;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.card_item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 1200px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr); /* 2 כרטיסים בשורה */
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr; /* כרטיס אחד בשורה במובייל */
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
