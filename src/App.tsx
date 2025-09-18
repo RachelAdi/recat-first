@@ -1,11 +1,12 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { Home } from "./Components/Home";
+import ReactDOM from "react-dom/client";
+import { AppRouter } from "./Components/AppRouter";
 function App() {
   return (
     <div>
-      <Home></Home>
+      <AppRouter></AppRouter>
     </div>
   );
 }

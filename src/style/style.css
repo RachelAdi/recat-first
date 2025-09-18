@@ -138,3 +138,61 @@ html {
     display: none;
   }
 }
+
+.props-drilling-container {
+  padding: 30px;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center; /* מרכז את הכותרת */
+  justify-content: center;
+}
+
+.children-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* הילדים במרכז */
+  width: 100%;
+}
+
+.child {
+  background-color: #ffccd5;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1 1 300px; /* כל ילד לוקח לפחות 300px */
+  max-width: 400px; /* לא יגדל יותר מדי */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.child h2 {
+  color: #e23e57;
+  margin-bottom: 10px;
+}
+
+.child h3 {
+  color: #ff4f81;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff4f81;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e23e57;
+}
+
+p {
+  color: #333;
+  font-weight: 500;
+}
